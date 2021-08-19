@@ -92,29 +92,41 @@ int main()
          printf("%d ",temp->data);
          temp=temp->next;
      }
-
+     int enter=1;
+     while(enter)
+     {
      printf("\nMenu:");
      printf("\nEnter 1 to add a element at First positon of the List\n");
      printf("Enter 2 to add a element at the last position of the List\n");
      printf("Enter 3 to add a element at the random Position of the list\n");
-     printf("Enter your Option :");
-     int option;
-     scanf("%d",&option);
+     
+     int option,flag=1;
+     
+     while(flag)
+     {  printf("Enter your Option :");
+        scanf("%d",&option);
      switch(option)
      {
-         case 1 : addFirst();
+         case 1 : addFirst(); flag=0;
                   break;
-         case 2 : addLast();
+         case 2 : addLast(); flag=0;
                   break;
-         case 3 : addRandom();
+         case 3 : addRandom(); flag=0;
                   break;
          default :printf("Invalid Option!Try Again...");
+                  flag=1;
+     }
      }
      printf("After  Modification the elements of the List :");
-     while(head!=NULL)
+     node* t=head;
+     while(t!=NULL)
      {
-         printf("%d ",head->data);
-         head=head->next;
+         printf("%d ",t->data);
+         t=t->next;
+     }
+     printf("\n\nIf you Want to continue the Process Enter 5 or else Enter 0 to quit");
+     printf("\nEnter your Option:");
+     scanf("%d",&enter);
      }
      return 0;
     
