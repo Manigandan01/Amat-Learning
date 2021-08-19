@@ -63,7 +63,7 @@ void deleteLast()
     tail->next=NULL;
     th1=th2=NULL;
 }
-void deleteRandom() // Initia Position of the linked List Starts from "1"
+void deleteRandom() // Initial Position of the linked List Starts from "1"
 {
     node *temp=NULL;
     if(head==NULL)
