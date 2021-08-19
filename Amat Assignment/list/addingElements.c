@@ -15,7 +15,7 @@ node* createNode()
     temp->next=NULL;
     return temp;
 }
-void addFirst()
+void addFirst()//adds element to the First position of the list
 {
     node* temp=createNode();
     printf("Enter the Data :");
@@ -30,7 +30,7 @@ void addFirst()
     temp->next=head;
     head=temp;
 }
-void addLast()
+void addLast()//adds element to the last position of the list
 {
     node* temp=createNode();
     printf("Enter the Data:");
@@ -45,13 +45,13 @@ void addLast()
     tail->next=temp;
     tail=temp;
 }
-void addRandom()
+void addRandom()//adding the element in random position, Initial position Starts from 1
 {
     node* th=head;
     int position;
     printf("Enter the Position Where the Data should be added :");
     scanf("%d",&position);
-    if(position<=1)
+    if(position<=1) // if the position entered in less than 1 there is no such position so element will be added to first
     {
         addFirst();
         return;
